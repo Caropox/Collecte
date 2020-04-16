@@ -5,38 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Formulaire</title>
 </head>
 <body>
-    <form class="formulaire">
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-        <div class="name">
-            <label for="input-name">Prénom et nom</label>
-            <input type="text" name="prenom-nom" id="p-n">
-        </div>
-    </form>
+    <img src="logo.png">
+    
+    <div class="text">
+        <h1>Les Pontonautes créent une plateforme de localisation des producteurs et des commerçants locaux</h1>
+
+        <p>Nous mettons en ligne un site pour les locavores recensant les producteurs locaux et les commerces ouverts en ces temps de confinement.
+        C'est le moment ou jamais de découvrir nos producteurs locaux et nos commerçants indépendants. Producteurs, commerçants, si vous souhaitez vous rendre visibles,
+        c'est ici ! L'annuaire est ici, il est gratuit et va s'enrichir au fil au fil du temps.</p>
+    </div>
+    <div class="form-style">
+        <form name="formulaire">
+          <fieldset>
+            <!-- Demande de l'email -->
+            <input type="email" name="email" placeholder="Votre Email" />
+            <small id="emailHelp">Votre email est bien valide. Merci.</small>
+            <input
+              type="button"
+              value="Vérifier"
+              onClick="verifmail(document.formulaire.email.value)"
+            />
+            
+          </fieldset>
+  
+          <div id="zone2">
+  
+          <!-- 0) Nom Prénom -->
+          <fieldset>
+                  <legend><span class="number">1</span> Nom</legend>
+                  <input type="text" name="field1" placeholder="Votre Nom" />
+                  <legend> Prénom</legend>
+                  <input type="text" name="field2" placeholder="Votre Prénom" />
+          </fieldset>
+  
+  
+          <!-- A) Commerçant ou Producteur ? -->
+          <fieldset>
+                  <legend><span class="number">2</span> Je suis...</legend>
+                  <label for="commerce_local" class="qcommercant">
+                          <input id="a_option-two" type="radio" name="optionsRadios" value="option1" checked>
+                          un commerçant/une commerçante indépendant(e) local(e)
+                  </label><br>
+                  <label for="producteur_local" class="pure-radio" >
+                          <input id="a_option-three" type="radio" name="optionsRadios" value="option2">
+                              un producteur/une productrice locale
+                  </label><br>
+          </fieldset>
+          
+          <!-- B) Nom de la ferme/boutique -->
+          <fieldset>
+                  <div>
+                      <legend><span class="number">3</span> Nom de votre boutique/ferme</legend>
+                      <input id="adresse" type="text" placeholder="Votre réponse">
+                  </div>
+          </fieldset>
+  
+          <!-- C) Adresse de la ferme/boutique -->
+  
+          <fieldset>
+                      <label for="adresse">Adresse de votre ferme/boutique (N° de rue, rue, lieu-dit, code postal, ville)
+                        <br>. Soyez précis, nous souhaitons vous donner la possibilité d'être géolocalisé.</label><br>
+                      <input id="adresse" type="text" placeholder="Votre réponse">
+                  </div>
+          </fieldset>
+          
+              <fieldset>
+                  <div class="pure-control-group">
+                      <label for="password">Numéro de téléphone </label><br>
+                      <input id="qtel" type="password" placeholder="Votre réponse">
+                  </div>
+              </fieldset>
+          
+              <fieldset>
+                  <div class="pure-control-group">
+                      <label for="password">Adresse Mail </label><br>
+                      <input id="password" type="password" placeholder="Votre réponse">
+                  </div>
+              </fieldset>
+          
+              <fieldset>
+                  <div class="pure-control-group">
+                      <label for="password">Votre page Facebook (si vous en avez une : merci de copier le lien) </label><br>
+                      <input id="qfacebook" type="password" placeholder="Votre réponse">
+                  </div>
+              </fieldset>
+          
+              <fieldset>
+                  <div class="pure-control-group">
+                      <label for="password">Votre site internet (si vous en avez un : merci de copier le lien) </label><br>
+                      <input id="qsite" type="Votre réponse" placeholder="Votre réponse">
+                  </div>
+              </fieldset>
+          
+          
+              <fieldset>
+                  <div class="pure-control-group">
+                      <label for="password">Description de votre boutique et vos produits. </label><br>
+                      <input id="qdesc" type="Votre réponse" placeholder="Votre réponse">
+                  </div>
+              </fieldset>
+          
+              <fieldset>
+                  <label for="password">Etes-vous... </label><br>
+                  
+                  <label for="option-two" class="pure-radio">
+                      <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+                      Ouvert
+                  </label><br>
+              
+                  <label for="option-three" class="pure-radio">
+                      <input id="option-three" type="radio" name="optionsRadios" value="option2">
+                      Fermé
+                  </label><br>
+              </fieldset>
+          
+                      <input type="button" value="Suivant">
+                  </div>
+              </fieldset>
+          <!--  -->
+  
+          <input type="submit" value="Apply" />
+        </form>
 </body>
 </html>
